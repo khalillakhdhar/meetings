@@ -15,4 +15,5 @@ export class ListMeetingsComponent implements OnInit {
     console.log(this.meetings);
   }
 
+
 }
