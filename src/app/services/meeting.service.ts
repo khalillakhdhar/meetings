@@ -9,7 +9,12 @@ export class MeetingService {
   constructor() { }
   additem(item) {
     MeetingService.meetings.push(item);
-
+    console.log(item+" added successfully")
+  }
+  getmeetings() {
+    return MeetingService.meetings;
+  }
+  updateMeeting() {
 
 
   }
