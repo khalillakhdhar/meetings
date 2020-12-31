@@ -7,15 +7,20 @@ import { Meeting } from '../classes/meeting';
 export class MeetingService {
   static meetings: Meeting[] = new Array();
   constructor() { }
-  additem(item) {
-    MeetingService.meetings.push(item);
-    console.log(item+" added successfully")
+  createMeeting(meeting) {
+    MeetingService.meetings.push(meeting);
+    console.log(meeting+" added successfully")
   }
-  getmeetings() {
+  getMeetings() {
     return MeetingService.meetings;
   }
-  updateMeeting() {
-
-
+  getMeeting(indice) {
+    return MeetingService.meetings[indice];
+  }
+  editMeeting(indice, meeting) {
+    MeetingService.meetings[indice] = meeting;
+  }
+  deleteMeeting(indice) {
+delete MeetingService.meetings[indice];
   }
 }
