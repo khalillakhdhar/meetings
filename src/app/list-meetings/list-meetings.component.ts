@@ -12,7 +12,7 @@ export class ListMeetingsComponent implements OnInit {
   constructor(private api:MeetingService) { }
   meetings: any;
   ngOnInit(): void {
-    this.meetings = this.api.getMeetings();
+    this.meetings = MeetingService.meetings;
     console.log(this.meetings);
   }
 
