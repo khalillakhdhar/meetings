@@ -1,1 +1,40 @@
-<p>add-meeting works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+<form>
+  <table class="table table-borderless">
+    <tr>
+      <td>id</td>
+      <td><input type="text" class="form-control" name="id" [(ngModel)]="meet.id"></td>
+    </tr>
+    <tr>
+      <td>Titre</td>
+      <td><input type="text" class="form-control" name="titre" [(ngModel)]="meet.titre"></td>
+    </tr>
+    <tr>
+      <td>Date début</td>
+      <td><input type="date" class="form-control" name="debut" [(ngModel)]="meet.date_deb"></td>
+    </tr>
+    <tr>
+      <td>Date fin</td>
+      <td><input type="date" class="form-control" name="debut" [(ngModel)]="meet.date_fin"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="button" (click)="add()" class="bt">Ajouter</button>
+
+      </td>
+    </tr>
+
+  </table>
+
+</form>
+
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>

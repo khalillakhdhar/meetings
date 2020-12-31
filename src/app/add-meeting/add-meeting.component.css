@@ -1,0 +1,9 @@
+td {
+  text-align: center;
+}
+.bt {
+  background-color: #275bdb;
+  color: aliceblue;
+  font-weight: bold;
+  border-radius: 5px;
+}

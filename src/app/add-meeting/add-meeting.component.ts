@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Meeting } from '../classes/meeting';
+import { MeetingService } from '../services/meeting.service';
 
 @Component({
   selector: 'app-add-meeting',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-meeting.component.css']
 })
 export class AddMeetingComponent implements OnInit {
-
-  constructor() { }
+meet:Meeting
+  constructor(private api:MeetingService) { }
+  meetings: any;
 
   ngOnInit(): void {
+    this.meet = new Meeting("","","","");
+  }
+  add() {
+
+    this.api.createMeeting(this.meet);
   }
 
 }
