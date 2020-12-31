@@ -9,8 +9,10 @@ import { MeetingService } from '../services/meeting.service';
 export class ListMeetingsComponent implements OnInit {
 
   constructor(private api:MeetingService) { }
-
+  meetings: any;
   ngOnInit(): void {
+    this.meetings = this.api.getMeetings();
+    console.log(this.meetings);
   }
 
 }

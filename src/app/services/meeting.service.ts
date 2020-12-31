@@ -6,7 +6,9 @@ import { Meeting } from '../classes/meeting';
 })
 export class MeetingService {
   static meetings: Meeting[] = new Array();
-  constructor() { }
+  constructor() {
+    MeetingService.meetings.push(new Meeting("meeting1","12/07/2021","12/07/2021"),new Meeting("meeting2","13/07/2021","15/07/2021"))
+  }
   createMeeting(meeting) {
     MeetingService.meetings.push(meeting);
     console.log(meeting+" added successfully")
